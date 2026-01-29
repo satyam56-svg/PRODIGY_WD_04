@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #2c3e50;
+    line-height: 1.6;
+    transition: 4s;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    z-index: 1000;
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: #3498db;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#themeToggleBtn {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #3498db;
+}
+
+.hero {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 2rem;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(135deg,#f5f9ff,#ffffff);
+    border-radius: 20px;
+}
+
+.hero-text h1 {
+    font-size: 2.6rem;
+}
+
+.hero-text span {
+    color: #3498db;
+}
+
+.hero-text h2 {
+    margin-top: 0.5rem;
+    color: #555;
+}
+
+.hero-text p {
+    margin: 1rem 0 2rem;
+    color: #666;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.7rem 1.6rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.primary {
+    background: #3498db;
+    color: white;
+}
+
+.outline {
+    border: 2px solid #3498db;
+}
+
+section {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+section h2 {
+    text-align: center;
+    color: #3498db;
+    margin-bottom: 2rem;
+}
+
+.about-cards {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.about-card {
+    background: #f4f8fb;
+    padding: 1.5rem;
+    border-radius: 15px;
+    min-width: 220px;
+    text-align: center;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 1.5rem;
+}
+
+.skill-card {
+    background: #ffffff;
+    padding: 1.3rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.progress {
+    height: 10px;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 0.6rem;
+}
+
+.progress span {
+    display: block;
+    height: 100%;
+    background: #3498db;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 18px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+}
+
+.project-card a {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.tech {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 0.4rem;
+}
+
+.contact-form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.contact-form button {
+    background: #3498db;
+    color: #fff;
+    border: none;
+    padding: 0.7rem;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.contact-info {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: #f4f8fb;
+    margin-top: 3rem;
+}
+
+body.dark-mode {
+    background: #121212;
+    color: #f0f0f0;
+}
+
+body.dark-mode .header,
+body.dark-mode .hero,
+body.dark-mode .about-card,
+body.dark-mode .skill-card,
+body.dark-mode .project-card,
+body.dark-mode .footer {
+    background: #1e1e1e;
+    color: #f0f0f0;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-menu {
+        display: none
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+}

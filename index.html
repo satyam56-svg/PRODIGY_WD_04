@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satyam Kumar | Java Full Stack Developer</title>
+    <script src="https://kit.fontawesome.com/4b7c9eb508.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="navbar" role="navigation">
+            <div class="logo">Satyam.dev</div>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <button id="themeToggleBtn" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+                <div class="nav-toggle" id="navToggleBtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <h1>Hi, I'm <span>Satyam Kumar</span></h1>
+            <h2>Java FullStack Developer</h2>
+            <p>I build clean, responsive and user-friendly websites using HTML, CSS and JavaScript.</p>
+
+            <div class="hero-buttons">
+                <a href="#projects" class="btn primary">View Projects</a>
+                <a href="#contact" class="btn outline">Contact Me</a>
+            </div>
+        </div>
+
+        <div class="hero-img">
+            <img src="assets/img/PP.png" alt="Profile" loading="lazy">
+        </div>
+    </section>
+
+    <section id="about" class="about reveal">
+        <h2>About Me</h2>
+
+        <p>
+            I'm Satyam Kumar, a Computer Science and passionate Java FullStack Developer.
+            I enjoy creating modern websites that not only look good but also feel smooth to use.
+        </p>
+
+        <div class="about-cards">
+            <div class="about-card">
+                <h3>Education</h3>
+                <p>B.Tech in Computer Science <br> Heritage Institute of Technology.</p>
+            </div>
+            <div class="about-card">
+                <h3>Experience</h3>
+                <p>3rd Year Student <br> Web Developer Intern at Prodigy InfoTech.</p>
+            </div>
+            <div class="about-card">
+                <h3>Interests</h3>
+                <p>UI Design, Coding, Cricket</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="skills reveal" id="skills">
+        <h2>My Skills</h2>
+        <div class="skill-grid">
+            <div class="skill-card">
+                <h3>HTML</h3>
+                <div class="progress"><span style="width:90%"></span></div>
+            </div>
+            <div class="skill-card">
+                <h3>CSS</h3>
+                <div class="progress"><span style="width:85%"></span></div>
+            </div>
+            <div class="skill-card">
+                <h3>JavaScript</h3>
+                <div class="progress"><span style="width:70%"></span></div>
+            </div>
+            <div class="skill-card">
+                <h3>Java</h3>
+                <div class="progress"><span style="width:40%"></span></div>
+            </div>
+            <div class="skill-card">
+                <h3>OOP</h3>
+                <div class="progress"><span style="width:80%"></span></div>
+            </div>
+            <div class="skill-card">
+                <h3>Git & GitHub</h3>
+                <div class="progress"><span style="width:90%"></span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects reveal">
+        <h2>Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>StopWatch WebApplication</h3>
+                <p> Designed with simplicity and usability in mind, this project allows users to start, pause, reset,
+                    and record lap times with precision and ease.</p>
+                <p class="tech">HTML CSS JS</p>
+                <a href="https://github.com/satyam56-svg/PRODIGY_WD_02" target="_blank" rel="noopener noreferrer">
+                    View on GitHub
+                </a>
+            </div>
+            <div class="project-card">
+                <h3>Tic Tac Toe</h3>
+                <p> A simple yet polished Tic Tac Toe game built with vanilla HTML5, CSS3, and JavaScript. No frameworks, no dependencies - just pure frontend code that works perfectly across all devices.</p>
+                <p class="tech">HTML CSS JS</p>
+                <a href="https://github.com/satyam56-svg/PRODIGY_WD_03" target="_blank" rel="noopener noreferrer">
+                    View on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact reveal">
+        <h2>Contact Me</h2>
+        <p>Have a project or internship opportunity? Let's talk.</p>
+
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea rows="5" placeholder="Your Message" required>
+            </textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+        <div class="contact-info">
+            <p>Email: satyamkumarsharma245@gmail.com</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p><i class="fa-regular fa-copyright"></i> 2026 Satyam Kumar. Built with <i class="fa-regular fa-heart"></i>using HTML, CSS & JavaScript.</p>
+    </footer>
+</body>
+
+</html>
