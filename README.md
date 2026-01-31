@@ -1,12 +1,11 @@
 # 👨‍💻 Satyam Kumar - Portfolio Website
 
-![Project Banner](assets/img/PP.png)  
-*(Add a banner image here if available, currently using profile picture as placeholder)*
+![Project Banner](assets/img/Banner1.png)  
 
 Welcome to my personal portfolio website! This project showcases my skills, experience, and projects as a Java Full Stack Developer. It is designed to be fully responsive, accessible, and visually appealing with a modern UI and Dark Mode support.
 
 ## 🚀 Live Demo
-> **[View Live Portfolio](#)** *(Replace with your deployed URL, e.g., GitHub Pages)*
+> **[View Live Portfolio](#)** *(https://github.com/satyam56-svg/PRODIGY_WD_04/deployments/github-pages)*
 
 ---
 
@@ -68,7 +67,7 @@ I'm always open to discussing new projects, creative ideas, or opportunities to 
 
 -   **Email:** [satyamkumarsharma245@gmail.com](mailto:satyamkumarsharma245@gmail.com)
 -   **GitHub:** [satyam56-svg](https://github.com/satyam56-svg)
--   **LinkedIn:** *(Add your LinkedIn URL here)*
+-   **LinkedIn:** [satyam kumar](https://www.linkedin.com/in/satyam-kumar-6a6888281/)
 
 ---
 
