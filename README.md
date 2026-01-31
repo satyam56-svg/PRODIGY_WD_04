@@ -5,8 +5,7 @@
 Welcome to my personal portfolio website! This project showcases my skills, experience, and projects as a Java Full Stack Developer. It is designed to be fully responsive, accessible, and visually appealing with a modern UI and Dark Mode support.
 
 ## 🚀 Live Demo
-> **[View Live Portfolio](#)(https://github.com/satyam56-svg/PRODIGY_WD_04/deployments/github-pages)
-
+[View Live Portfolio](https://github.com/satyam56-svg/PRODIGY_WD_04/deployments/github-pages)
 ---
 
 ## ✨ Features
