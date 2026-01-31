@@ -301,7 +301,6 @@ body.dark-mode .footer {
     }
 }
 
-/* Upar jane wala button */
 #scrollToTopBtn {
     position: fixed;
     bottom: 30px;
@@ -316,7 +315,6 @@ body.dark-mode .footer {
     font-size: 1.2rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     display: none;
-    /* JS control karega */
     z-index: 1000;
     transition: transform 0.3s, background 0.3s;
 }
@@ -326,7 +324,6 @@ body.dark-mode .footer {
     background: #2980b9;
 }
 
-/* Dark Mode ke liye extra styles */
 body.dark-mode .nav-menu {
     background: #1e1e1e;
 }

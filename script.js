@@ -1,46 +1,51 @@
-/* ================= NAVBAR TOGGLE (Mobile me menu kholne ke liye) ================= */
-
 const navToggleBtn = document.getElementById("navToggleBtn");
 const navMenu = document.getElementById("navMenu");
 
-navToggleBtn.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
-});
-
-/* Jab link click ho to menu band kr do */
-document.querySelectorAll(".nav-menu a").forEach(link => {
-  link.addEventListener("click", () => {
-    navMenu.classList.remove("active");
+if (navToggleBtn && navMenu) {
+  navToggleBtn.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
   });
-});
 
-
-/* ================= DARK MODE TOGGLE (Dark mode on/off krne ka logic) ================= */
+  document.querySelectorAll(".nav-menu a").forEach(link => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("active");
+    });
+  });
+}
 
 const themeToggleBtn = document.getElementById("themeToggleBtn");
 const body = document.body;
+const icon = themeToggleBtn.querySelector("i");
 
-/* Pehle se saved theme check krne ke liye */
 const savedTheme = localStorage.getItem("theme");
 if (savedTheme === "dark") {
   body.classList.add("dark-mode");
-  themeToggleBtn.textContent = "☀️";
+  if (icon) {
+    icon.classList.remove("fa-moon");
+    icon.classList.add("fa-sun");
+  }
 }
 
-themeToggleBtn.addEventListener("click", () => {
-  body.classList.toggle("dark-mode");
+if (themeToggleBtn) {
+  themeToggleBtn.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+    const isDark = body.classList.contains("dark-mode");
 
-  if (body.classList.contains("dark-mode")) {
-    themeToggleBtn.textContent = "☀️";
-    localStorage.setItem("theme", "dark");
-  } else {
-    themeToggleBtn.textContent = "🌙";
-    localStorage.setItem("theme", "light");
-  }
-});
-
-
-/* ================= SCROLL REVEAL ANIMATION (Scroll krne pe elements reveal honge) ================= */
+    if (isDark) {
+      localStorage.setItem("theme", "dark");
+      if (icon) {
+        icon.classList.remove("fa-moon");
+        icon.classList.add("fa-sun");
+      }
+    } else {
+      localStorage.setItem("theme", "light");
+      if (icon) {
+        icon.classList.remove("fa-sun");
+        icon.classList.add("fa-moon");
+      }
+    }
+  });
+}
 
 const revealElements = document.querySelectorAll(".reveal");
 
@@ -49,7 +54,6 @@ const revealOnScroll = () => {
 
   revealElements.forEach(element => {
     const elementTop = element.getBoundingClientRect().top;
-
     if (elementTop < windowHeight - 100) {
       element.classList.add("active");
     }
@@ -57,90 +61,55 @@ const revealOnScroll = () => {
 };
 
 window.addEventListener("scroll", revealOnScroll);
-revealOnScroll(); // load hone pe chalao
-
-
-/* ================= SKILL PROGRESS ANIMATION (Skills bar animation) ================= */
+revealOnScroll();
 
 const progressBars = document.querySelectorAll(".progress span");
-
-const animateSkills = () => {
-  progressBars.forEach(bar => {
-    const width = bar.style.width;
-    bar.style.width = "0";
-
-    setTimeout(() => {
-      bar.style.width = width;
-    }, 300);
-  });
-};
-
-/* Jab skills section dikhe tabhi animation chalega */
+const skillsSection = document.getElementById("skills");
 let skillsAnimated = false;
 
 window.addEventListener("scroll", () => {
-  const skillsSection = document.getElementById("skills");
-
-  if (!skillsSection) return;
+  if (!skillsSection || skillsAnimated) return;
 
   const sectionTop = skillsSection.getBoundingClientRect().top;
 
-  if (sectionTop < window.innerHeight - 150 && !skillsAnimated) {
-    animateSkills();
+  if (sectionTop < window.innerHeight - 150) {
+    progressBars.forEach(bar => {
+      const width = bar.style.width; 
+      bar.style.width = "0"; 
+
+      setTimeout(() => {
+        bar.style.width = width;
+      }, 100);
+    });
     skillsAnimated = true;
   }
 });
 
-
-/* ================= FAQ ACCORDION (FAQ section ka logic) ================= */
-
-const faqQuestions = document.querySelectorAll(".faq-question");
-
-faqQuestions.forEach(question => {
-  question.addEventListener("click", () => {
-    const answer = question.nextElementSibling;
-
-    question.classList.toggle("active");
-
-    if (answer.style.maxHeight) {
-      answer.style.maxHeight = null;
-    } else {
-      answer.style.maxHeight = answer.scrollHeight + "px";
-    }
-  });
-});
-
-
-/* ================= SCROLL TO TOP BUTTON (Upar wapas jane wala button) ================= */
-
 const scrollBtn = document.getElementById("scrollToTopBtn");
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    scrollBtn.style.display = "block";
-  } else {
-    scrollBtn.style.display = "none";
-  }
-});
-
-scrollBtn.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
+if (scrollBtn) {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollBtn.style.display = "block";
+    } else {
+      scrollBtn.style.display = "none";
+    }
   });
-});
 
-
-/* ================= CONTACT FORM (Basic Handling) ================= */
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+}
 
 const contactForm = document.querySelector(".contact-form");
 
 if (contactForm) {
   contactForm.addEventListener("submit", (e) => {
     e.preventDefault();
-
-    alert("Thanks for reaching out! I’ll get back to you soon 😊");
-
+    alert("Thanks for reaching out! I'll get back to you soon.");
     contactForm.reset();
   });
 }
